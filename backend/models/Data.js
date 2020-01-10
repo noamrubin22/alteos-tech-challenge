@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const employeeSchema = new Schema({
+const dataSchema = new Schema({
   _id: String,
   age: Number,
   eyeColor: String,
@@ -13,5 +13,5 @@ const employeeSchema = new Schema({
   address: String
 });
 
-const Employee = mongoose.model("User", employeeSchema);
-module.exports = Employee;
+const Data = mongoose.model("User", dataSchema);
+module.exports = Data;

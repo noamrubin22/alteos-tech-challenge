@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Employee from "../components/Employee";
+import Employee from "./Employee";
 import "./Search.css";
 import axios from "axios";
 
@@ -8,12 +8,17 @@ const Search = props => {
   const [filtered, setFiltered] = useState([]);
   const [employees, setEmployees] = useState([]);
 
+  /* data collection */
   useEffect(() => {
-    console.log("component did mount");
-    axios.get("/api").then(response => {
-      setFiltered([...response.data]);
-      setEmployees([...response.data]);
-    });
+    axios
+      .get("/api")
+      .then(response => {
+        setFiltered([...response.data]);
+        setEmployees([...response.data]);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }, []);
 
   const handleChange = event => {
@@ -22,7 +27,6 @@ const Search = props => {
 
   /* checks match employees props and searchterm, updates state */
   useEffect(() => {
-    console.log("didmount searchinput");
     let match = [];
     employees.forEach(employee => {
       if (
@@ -45,11 +49,9 @@ const Search = props => {
       }
       setFiltered(match);
     });
-  }, [searchInput]);
+  }, [searchInput, employees]);
 
-  useEffect(() => {
-    console.log("Filtered updated");
-  }, [filtered]);
+  useEffect(() => {}, [filtered]);
 
   return (
     <div className="search">

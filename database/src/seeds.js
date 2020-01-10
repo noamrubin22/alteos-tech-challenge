@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Employee = require("../../backend/models/Employee");
+const Employee = require("../../backend/models/Data");
 const employees = require("./src/data.json.js.js.js");
 
 const dbName = "alteos-project";

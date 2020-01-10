@@ -64,9 +64,6 @@ app.use(
   })
 );
 
-// default value for title local
-app.locals.title = "Express - Generated with IronGenerator";
-
 const apiRoutes = require("./routes/api");
 app.use("/api", apiRoutes);
 
