@@ -1,0 +1,13 @@
+.display-employee {
+  background-color: lightgray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 90px;
+  margin-right: 90px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+h4 {
+  margin: 20px;
+}

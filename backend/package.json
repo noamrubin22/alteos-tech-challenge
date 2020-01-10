@@ -1,0 +1,30 @@
+{
+  "name": "tech-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "DEBUG=test-backend:* nodemon ./bin/www",
+    "dev-windows": "nodemon ./bin/www"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.4",
+    "cookieparser": "^0.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "hbs": "^4.0.6",
+    "mongoose": "^5.8.3",
+    "morgan": "^1.9.1",
+    "node-sass-middleware": "^0.11.0",
+    "path": "^0.12.7",
+    "react-router-dom": "^5.1.2",
+    "serve-favicon": "^2.5.0"
+  }
+}
